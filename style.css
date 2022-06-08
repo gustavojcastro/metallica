@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box; 
-    
 }
 
 :root {
@@ -14,21 +13,21 @@
 }
 
 body {
-    width: 100vw;
+    width: 100%;
     font-family: 'Shadows Into Light', cursive;
 }
 
-a {
+.navbar a {
     text-decoration: none;
     color: var(--rojo)
 }
 
-a:hover {
+.navbar a:hover {
     color: var(--morado);
     text-decoration: underline;
 }
 
- li {
+li {
      list-style: none;
     
  }
@@ -78,26 +77,26 @@ a:hover {
 /*section 1*/
 
 .section1 {
-    background-image: url(./img/store-hero_20190114.jpg);
+    background-color: black;
     display: flex;
-    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
 
+.metallica-trans {
+    width: 90%;
 }
 
 .metallica-fondo {
-    width: 100%;
-    max-width: 600px;
-    border-radius: 1rem;
-    margin: 1rem;
-
-
+    border-radius: 3rem;
+    padding:  1rem;
 }
 
 .metallica-arg {
-    color: rgb(242, 241, 240);
-    margin: 5rem 3rem 5rem 3rem;
-    width: 50%;
-    text-align: center; 
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
 .btn {
@@ -106,24 +105,25 @@ a:hover {
     padding: 5px ;
     border-radius: 7px;
     border: 3px solid black;
-    
 }
+
+
 .btn:hover {
     background-color: var(--tinto);
     transition: 3s;
     transform: scale(1.1);
     color: black;  
-    text-decoration: none;
 }
 
 .metallica-arg p {
-    font-size: 25px;
+    color: white;
+    text-align: center;
 }
 
-.metallica-arg h2 {
-    font-size: 50px;
-    
-}
+/*.metallica-arg h2 {
+    color: var(--tinto);
+    font-size: 500px;
+}*/
 
 .botones {
     display: flex;
@@ -132,36 +132,153 @@ a:hover {
     gap: 5rem;
 }
 
+.botones a {
+    text-decoration: none;
+}
 /*terminada section1*/
 /*empiezo section2*/
 
 .section2 {
-    background-image: url(./img/home-hero-aftershock.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 700px;
-    
-    
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: black;
+    color: white;
 }
 
 .metallica-bio {
-    color: white;
-    font-size: 20px;
     text-align: center;
-    width: 100%;
-    padding: 10px 100px;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    overflow: auto;
+}
+
+.metallica-bio h2 {
+    font-size: xxx-large;
+}
+
+
+/*terminada section2*/
+
+/*empieza section3 compras*/
+
+.section3 {
+    background-color: black;
     display: flex;
     justify-content: center;
-
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
-.iframe {
-width: 100px;
-margin: 100px 300px;
+.productos img {
+    width: 200px;
+    border-radius: 1rem;
+    
 }
+
+.estrella {
+    width: 200px;
+}
+
+.estrella:hover{
+    transform: rotate(360deg);
+    transition: transform 2s ease ;
+}
+
+.productos {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 2rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px 5px rgba(238, 236, 236, 0.3);
+    color: white;
+    position: relative;
+}
+
+.productos:hover {
+    box-shadow: 0 0 20px 5px rgba(213, 14, 14, 0.3);
+}
+
+.precio {
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight:400;
+    margin-top: 1rem;
+}
+
+.btn-placas {
+    background-color:var(--morado);
+    padding: 2px ;
+    text-align: center;
+    border-radius: 1rem;
+    margin-top: 1.5rem;
+    color: black;
+    text-decoration: none;
+    
+}
+
+.btn-placas:hover {
+    transform: scale(1.2);
+}
+
+.stock {
+    background-color: red;
+    padding: 1rem 3rem;
+    position: absolute;
+    top: 1rem;
+    margin-left: 1rem;
+}
+
+.disabled {
+    background-color: grey;
+    cursor: no-drop;
+}
+
+/*terminada section3 compras*/
+
+/*mediaqueris*/
+
+@media (min-width: 700px){
+    
+    .section1 {
+        flex-direction:row;
+        justify-content:space-between;
+        align-items: center;
+    }
+
+    .metallica-fondo {
+        width: 700px;
+    }
+
+    .metallicap{
+        font-size: 2rem
+    }
+
+    .iframe {
+        width: 1000px;
+        height: 600px;
+    }
+
+    .section3 {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .productos {
+        margin: 2rem;
+    
+    }
+}
+
+
+
 
 
 
