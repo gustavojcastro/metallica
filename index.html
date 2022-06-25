@@ -5,31 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <title>MetallicA</title>
 </head>
 <body>
-    <header >
-        <nav class="navbar">
-            <ul class="menu-navbar">
-                <li>
-                    <a href="#">
+    <header class="header">
+                    <div class="logo-m"></div>
                         <img src="./img/metallica-rojo.jpg" alt="metallica-rojo" class="logo-nav">
-                    </a>
-                </li>
-                <div class="container-items">
-                    <li class="item"><a href="#">contacto<a><li>
-                    <li class="item"><a href="#">giras</a></li>
-                    <li class="item"><a href="#">musica</a></li>
-                </div>
-            </ul> 
-        </nav>
+                    </div>
+                <nav class="navbar"></nav>
+                <label for="toggle-menu"><i class="fa-solid fa-bars menu"></i></label>
+                <input type="checkbox" id="toggle-menu">
+                    <ul class="navbar-list">
+                        <li><a href="#Argentina">Inicio</a></li>
+                        <li><a href="#bio">Nosotros</a></li>
+                        <li><a href="#Musica">Musica</a></li>
+                    </ul> 
+                </nav>
     </header>
     <main>
-        <section class="section1">
+        <section class="section1" id="Argentina">
             <div class="metallica-arg">
                 <!--<h2>Metallica en Argentina</h2>-->
-                <img src="./img/metallica3d.png" alt="metallica" class="metallica-trans">
+                <img src="./img/metallica3d.png" alt="metallica" class="metallica-trans  " >
                 <p class="metallicap">MetallicA y su paso por latino America, una de las bandas mas iconicas
                     del mundo sigue estremeciendo estadios..
                 </p>
@@ -39,20 +41,24 @@
                 </div>
             </div>
             <div class="metallica-foto">
-                <img src="./img/metallia-argentina.jpg" alt="metallica-fondo" class="metallica-fondo">
+                <img src="./img/metallia-argentina.jpg" alt="metallica-fondo" class="metallica-fondo animate__animated animate__pulse animate__infinite ">
             </div>
         </section>
-        <section class="section2">
-            <div class="metallica-bio">
+        <section class="section2" >
+            <div class="metallica-bio" id="bio">
                 <h2>BIOGRAFIA</h2>
-               <p>Metallica es una banda estadounidense de thrash metal1​ originaria de Los Ángeles, pero con base en San Francisco desde febrero de 1983. Fue fundada en 1981 en Los Ángeles por Lars Ulrich y James Hetfield, a los que se les unirían Dave Mustaine y Ron McGovney. Estos dos músicos fueron después sustituidos por el guitarrista Kirk Hammett y el bajista Cliff Burton respectivamente, Dave Mustaine fue despedido un año después de ingresar en la banda debido a su excesiva adicción al alcohol y su actitud violenta, siendo sustituido por Kirk Hammett (exguitarrista de Exodus). Ron renuncia a la banda debido al mal comportamiento de Dave Mustaine, el cual era violento y problemático cuando estaba bajo el efecto del alcohol. Es entonces, tras contactar con Cliff Burton que la banda se traslada a San Francisco. (Cabe resaltar que Ron sabía que lo iban a despedir y sustituir por Cliff Burton). Por otra parte, el 27 de septiembre de 1986, fue la muerte de Cliff Burton en un accidente de autobús en Suecia, durante una de sus giras, esto provocó la entrada al grupo de Jason Newsted,2​ quien, tras su abandono quince años más tarde, sería sustituido por el bajista actual, Robert Trujillo.</p>
+               <p>Metallica es una banda estadounidense de thrash metal​ originaria de Los Ángeles, pero con base en San Francisco desde febrero de 1983. Fue fundada en 1981 en Los Ángeles por Lars Ulrich y James Hetfield, a los que se les unirían Dave Mustaine y Ron McGovney. Estos dos músicos fueron después sustituidos por el guitarrista Kirk Hammett y el bajista Cliff Burton respectivamente, Dave Mustaine fue despedido un año después de ingresar en la banda debido a su excesiva adicción al alcohol y su actitud violenta, siendo sustituido por Kirk Hammett (exguitarrista de Exodus). Ron renuncia a la banda debido al mal comportamiento de Dave Mustaine, el cual era violento y problemático cuando estaba bajo el efecto del alcohol. Es entonces, tras contactar con Cliff Burton que la banda se traslada a San Francisco. (Cabe resaltar que Ron sabía que lo iban a despedir y sustituir por Cliff Burton). Por otra parte, el 27 de septiembre de 1986, fue la muerte de Cliff Burton en un accidente de autobús en Suecia, durante una de sus giras, esto provocó la entrada al grupo de Jason Newsted,2​ quien, tras su abandono quince años más tarde, sería sustituido por el bajista actual, Robert Trujillo.</p>
             </div>
-            <div >
-                <iframe width="450" height="315" class="iframe" src="https://www.youtube.com/embed/wPmc2vFDE8g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div>
+                <iframe width="340" height="315" class="iframe" src="https://www.youtube.com/embed/wPmc2vFDE8g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </section>
     <section class="section3">
-        <img src="./img/estrella.webp" alt="estrella" class="estrella">
+        <div class="estrella-m">
+            <img src="./img/estrella.webp" alt="estrella" class="estrella">
+            <h2 id="Musica">DISCOGRAPHY</h2>
+        </div>
+        <div class="discos">
         <div class="productos">
             <img src="./img/Metallica-Kill_Em_All-Frontal.webp" alt="placas" class="placas">
             <span class="precio">$10000</span>
@@ -104,8 +110,41 @@
             <span class="precio">$10000</span>
             <a href="#" class="btn-placas">comprar</a>
         </div>
+    </div>
+    </section>
+    <section class="section4">
+        <div class="encontranos">
+            <p> Seek and Destroy nuestras tiendas</p>
+        </div>
+        <div class="mapa">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52928.72853684648!2d-64.2111512486357!3d-31.41471643182119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432985f478f5b69%3A0xb0a24f9a5366b092!2zQ8OzcmRvYmE!5e0!3m2!1ses-419!2sar!4v1656191630743!5m2!1ses-419!2sar" width="340" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+    <section class="section5">
+        <div class="div-div">
+        <span class="divisor"></span>
+        </div>
     </section>
     </main>
-    
+    <footer class="footer">
+        <div class="footer-msj">
+            <p>
+                Muchas gracias por seguir a la mejor banda del mundo!!
+            </p>
+        </div>
+        <div class="info-redes">
+         <div class="redes-sociles">
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+         </div>
+         <p class="met-2022">MetallicA @ 2022</p>
+          <div class="politicas">
+            <a href="#">Derechos de autor</a>
+            <a href="#">Politicas</a>
+            <a href="#">Contáctanos</a>
+          </div>
+        </div>
+     </footer>
 </body>
 </html>

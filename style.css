@@ -5,6 +5,14 @@
     box-sizing: border-box; 
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+    
+}
+
+
+    
 :root {
     --rojo: #C32424;
     --morado: #6B0E89;
@@ -17,60 +25,77 @@ body {
     font-family: 'Shadows Into Light', cursive;
 }
 
-.navbar a {
-    text-decoration: none;
-    color: var(--rojo)
-}
-
-.navbar a:hover {
-    color: var(--morado);
-    text-decoration: underline;
-}
-
-li {
-     list-style: none;
-    
- }
-
- * img {
-     width: 100% ;
-     height: auto;
- }
 
  .logo-nav {
-     width: 100%;
      width: 100px;
+     margin-right: 300px;
  }
+
 
  header {
      background-color:black;
-     width: 100%;
+     width:100%;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin: 0 auto;
+     position: sticky;
+     z-index: 9999;
  }
+
   /*navbar*/
+  .menu {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    margin-right: 30px;
+  }
 
-  .menu-navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    
-}
-
-
-.container-items {
+  .navbar-list {
     display: flex;
     justify-content: center;
-    gap: 10px;
-    margin: 0 5px;
-    
-}
-
-.item {
+    align-items: center;
+    gap: 15px;
+    margin-right: 10px;
+    position: absolute;
+    background-color: black;
+    flex-direction: column;
+    top: 100px;
+    right: 0;
     width: 100%;
-    text-align: center;
-    padding: 1rem 1rem ;
+    height: calc(50vh - 100px);
+    display: none;
+    z-index: 9999;
+  }
 
-}
+  #toggle-menu:checked + .navbar-list {
+    display: flex;
+  }
+
+  .navbar-list a {
+    text-decoration: none;
+    color: var(--rojo);
+  }
+
+  .navbar-list a:hover{
+    color: var(--morado);
+    font-size: 20px;
+  }
+
+  .navbar-list li {
+    list-style: none;
+  }
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #toggle-menu {
+    display: none;
+  }
+
 
 /*terminado navbar*/
 
@@ -92,6 +117,11 @@ li {
 .metallica-fondo {
     border-radius: 3rem;
     padding:  1rem;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
 }
 
 .metallica-arg {
@@ -118,6 +148,7 @@ li {
 .metallica-arg p {
     color: white;
     text-align: center;
+    margin: 0 1rem;
 }
 
 /*.metallica-arg h2 {
@@ -151,8 +182,7 @@ li {
 .metallica-bio {
     text-align: center;
     padding: 1rem 0;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+    margin: 2rem 1rem 2rem;
     overflow: auto;
 }
 
@@ -182,11 +212,26 @@ li {
 
 .estrella {
     width: 200px;
-}
+    animation: estrellam 3s ease-in-out infinite;
 
-.estrella:hover{
+}
+.estrella-m h2 {
+    color: white;
+    font-size: 70px;
+
+}
+/*.estrella:hover{
     transform: rotate(360deg);
-    transition: transform 2s ease ;
+    transition: transform 2s ease;
+}*/
+
+
+@keyframes estrellam {
+    0% {
+        transform: rotate(180deg);
+    }
+    
+
 }
 
 .productos {
@@ -243,10 +288,110 @@ li {
 
 /*terminada section3 compras*/
 
+/*empiezo section4 mapa*/
+
+
+.section4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color:black;
+    padding: 40px 0 50px 0;
+}
+
+.encontranos {
+    color: white;
+    font-size: 30px;
+    padding: 20px 0;
+    text-shadow: -2px -6px 2px;
+}
+
+.divisor {
+    margin-top: 20px;
+    max-width: 90%;
+    width: 400px;
+    height: 3px;
+    background-color: var(--tinto);
+}
+
+.section5 {
+    height: 50px;
+    background-color: black;
+}
+
+.div-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+/*empiezo footer */
+
+.footer {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+}
+
+.footer-msj p {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.redes-sociles {
+    display: flex;
+    gap: 20px;
+}
+ .info-redes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+ }
+
+ .info-redes p {
+    font-size: 25px;
+ }
+
+ .politicas {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+ }
+
+.politicas a {
+    text-decoration: none;
+    color: white;
+
+}
+
 /*mediaqueris*/
 
-@media (min-width: 700px){
-    
+@media (min-width: 700px) {
+
+    .navbar-list {
+        display: flex;
+        flex-direction:row;
+        position:sticky;
+        z-index:0;
+        height: 100px;
+        justify-content: flex-end;
+        margin-right: 50px;
+        font-weight: 700;
+    }
+
+    label {
+        display: none;
+    }
+
     .section1 {
         flex-direction:row;
         justify-content:space-between;
@@ -255,10 +400,16 @@ li {
 
     .metallica-fondo {
         width: 700px;
+        margin-right: 2rem;
+
     }
 
     .metallicap{
         font-size: 2rem
+    }
+    
+    .metallica-bio p {
+        margin: 0 2rem;
     }
 
     .iframe {
@@ -266,21 +417,41 @@ li {
         height: 600px;
     }
 
-    .section3 {
+    .estrella {
+        margin-top: 2rem;
+    }
+
+
+    .discos {
+        display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+
     }
 
     .productos {
-        margin: 2rem;
+        margin: 1rem;
+    }
+
+    .footer {
+        flex-direction: row;
+        justify-content: space-around;
     
     }
+
+    .divisor {
+        max-width: 90%;
+        width: 1300px;
+        height: 3px;
+        background-color: var(--tinto);
 }
 
+.encontranos {
+    font-size: 50px;
+}
 
-
-
-
-
-
+}
 
